@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+/* Places UI Kit Basic Autocomplete widget styling */
+gmp-basic-place-autocomplete,
+gmp-place-autocomplete {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  border-radius: 0.875rem;
+  background-color: #f8fafc;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  box-sizing: border-box;
+}
+
+gmp-basic-place-autocomplete::part(input),
+gmp-place-autocomplete::part(input) {
+  font-family: inherit;
+  font-size: 0.8125rem;
+  color: #0f172a;
+}
+
+gmp-basic-place-autocomplete::part(prediction-list),
+gmp-place-autocomplete::part(prediction-list) {
+  font-family: inherit;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  z-index: 99999;
+}
+
